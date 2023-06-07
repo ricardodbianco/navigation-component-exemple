@@ -28,8 +28,8 @@ class PersonalDataFragment : Fragment() {
                 name = binding.tilName.text,
                 age = binding.tilAge.text.toInt()
             )
-            findNavController().navigate(R.id.go_to_addressFragment)
-            // TODO mandar os dados para outro fragment
+            val directions = PersonalDataFragmentDirections.goToAddressFragment(model)
+            findNavController().navigate(directions)
         }
     }
 
